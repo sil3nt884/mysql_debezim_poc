@@ -1,5 +1,5 @@
 const { Kafka } = require('kafkajs');
-
+//https://dev.to/ebukaodini/using-kafkajs-with-aws-msk-on-a-nodejs-lambda-function-5e41
 const kafka = new Kafka({
     clientId: 'my-app',
     brokers: ['localhost:29092']
