@@ -1,0 +1,17 @@
+{
+  "name": "debezium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:connector": "curl -i -X POST -H \"Accept:application/json\" -H \"Content-Type:application/json\" http://localhost:8083/connectors/ -d @mysql.json",
+    "run:consumer": "node consumer.js",
+    "remove:connector": "curl -i -X DELETE -H \"Accept:application/json\" -H \"Content-Type:application/json\" http://localhost:8083/connectors/mysql-connector",
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}
